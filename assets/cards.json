@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Strike",
+    "cost": 1,
+    "type": "attack",
+    "lifecycle": "regular",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "action": { "damage": 6 }
+      }
+    ]
+  },
+  {
+    "name": "Defend",
+    "cost": 1,
+    "type": "skill",
+    "lifecycle": "regular",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "action": { "block": 5 }
+      }
+    ]
+  },
+  {
+    "name": "Bash",
+    "cost": 2,
+    "type": "attack",
+    "lifecycle": "regular",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "action": { "damage": 8 }
+      },
+      {
+        "timing": "onPlay",
+        "action": {
+          "applyStatus": {
+            "kind": "vulnerable",
+            "stacks": 2
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Backstab",
+    "cost": 0,
+    "type": "attack",
+    "lifecycle": "exhaust",
+    "effects": [
+      {
+        "timing": "onPlay",
+        "action": { "damage": 11 }
+      }
+    ]
+  },
+  {
+    "name": "Ascender's Bane",
+    "cost": "unplayable",
+    "type": "curse",
+    "lifecycle": "ethereal",
+    "effects": []
+  }
+]
