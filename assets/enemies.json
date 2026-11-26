@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Jaw Worm",
+    "maxHp": 44,
+    "pattern": [
+      {
+        "damage": 11,
+        "hits": 1,
+        "effects": [],
+        "target": "player"
+      },
+      {
+        "damage": 7,
+        "hits": 2,
+        "effects": [],
+        "target": "player"
+      },
+      {
+        "damage": 0,
+        "hits": 1,
+        "effects": [
+          {
+            "timing": "onPlay",
+            "action": {
+              "applyStatus": {
+                "kind": "strength",
+                "stacks": 3
+              }
+            }
+          }
+        ],
+        "target": "self"
+      }
+    ]
+  },
+  {
+    "name": "Cultist",
+    "maxHp": 50,
+    "pattern": [
+      {
+        "damage": 0,
+        "hits": 1,
+        "effects": [
+          {
+            "timing": "onPlay",
+            "action": {
+              "applyStatus": {
+                "kind": "strength",
+                "stacks": 1
+              }
+            }
+          }
+        ],
+        "target": "self"
+      },
+      {
+        "damage": 6,
+        "hits": 1,
+        "effects": [],
+        "target": "player"
+      }
+    ]
+  },
+  {
+    "name": "Red Louse",
+    "maxHp": 12,
+    "pattern": [
+      {
+        "damage": 5,
+        "hits": 1,
+        "effects": [
+          {
+            "timing": "onPlay",
+            "action": {
+              "applyStatus": {
+                "kind": "weak",
+                "stacks": 1
+              }
+            }
+          }
+        ],
+        "target": "player"
+      },
+      {
+        "damage": 0,
+        "hits": 1,
+        "effects": [
+          {
+            "timing": "onPlay",
+            "action": {
+              "applyStatus": {
+                "kind": "strength",
+                "stacks": 2
+              }
+            }
+          }
+        ],
+        "target": "self"
+      }
+    ]
+  }
+]

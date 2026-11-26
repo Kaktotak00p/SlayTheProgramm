@@ -1,0 +1,33 @@
+cabal-version: 3.12
+name:          Slay-The-Programm
+version:       0.1.0.0
+build-type:    Simple
+data-files:    assets/cards.json
+               assets/enemies.json
+
+common shared
+  default-language: GHC2021
+  ghc-options:      -Wall
+  build-depends:    base
+
+library
+  import:          shared
+  hs-source-dirs:  lib
+  exposed-modules: Game.Types
+                   Game.Rules
+                   Game.Assets
+  build-depends:   aeson, bytestring, random, text
+
+executable game
+  import:         shared
+  hs-source-dirs: src
+  main-is:        Main.hs
+  other-modules:  AssetLoader
+  build-depends:  Slay-The-Programm, aeson, brick, random
+
+test-suite tests
+  import:         shared
+  type:           exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is:        GameTest.hs
+  build-depends:  Slay-The-Programm, HUnit, QuickCheck, random
